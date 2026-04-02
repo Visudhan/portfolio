@@ -359,10 +359,11 @@ body::before {
     bottom: 0;
     left: 80px;
     right: 80px;
-    height: 1px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 
 .divider-line {
@@ -380,14 +381,16 @@ body::before {
     width: 40px;
     height: 40px;
     background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .divider-icon svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     color: var(--text-muted);
 }
 
@@ -970,6 +973,8 @@ body::before {
 
 .about {
     background: var(--bg-alt);
+    min-height: auto;
+    padding-bottom: 160px;
 }
 
 .about-content {
@@ -977,7 +982,6 @@ body::before {
     grid-template-columns: 1.5fr 1fr;
     gap: 100px;
     align-items: start;
-    padding-bottom: 120px;
 }
 
 .about-desc {
@@ -1257,6 +1261,14 @@ body::before {
     
     .section {
         padding: 0 24px;
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    
+    .section.hero {
+        min-height: 100vh;
+        padding-top: 100px;
     }
 }
 
